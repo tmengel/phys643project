@@ -1,0 +1,109 @@
+Beams:idA =  2212
+Beams:idB = 2212
+Beams:eCM = 200.0
+Tune:pp = 14 
+
+Init:showProcesses = off
+Init:showChangedSettings = on
+Next:numberCount = 1
+Next:numberShowInfo = 1
+#Next:numberShowProcess = 1
+#Next:numberShowEvent = 1
+
+HardQCD:hardccbar = on ! Enables gg2ccbar and qqbar2ccbar
+HardQCD:hardbbbar = on ! Enables gg2bbbar and qqbar2bbbar
+SoftQCD:inelastic = off
+Bottomonium:all = off
+Charmonium:all = off
+
+411:onMode = off
+421:onMode = off
+10411:onMode = off
+10421:onMode = off
+413:onMode = off
+423:onMode = off
+10413:onMode = off
+10423:onMode = off
+20413:onMode = off
+20423:onMode = off
+415:onMode = off
+425:onMode = off
+431:onMode = off
+10431:onMode = off
+433:onMode = off
+10433:onMode = off
+20433:onMode = off
+435:onMode = off
+4122:onMode = off
+4222:onMode = off
+4212:onMode = off
+4224:onMode = off
+4214:onMode = off
+4232:onMode = off
+4132:onMode = off
+4322:onMode = off
+4312:onMode = off
+4324:onMode = off
+4314:onMode = off
+4332:onMode = off
+4334:onMode = off
+4412:onMode = off
+4422:onMode = off
+4414:onMode = off
+4424:onMode = off
+4432:onMode = off
+4434:onMode = off
+4444:onMode = off
+
+521:onMode = off
+511:onMode = off
+531:onMode = off
+541:onMode = off
+5122:onMode = off
+5132:onMode = off
+5142:onMode = off
+5232:onMode = off
+5242:onMode = off
+5332:onMode = off
+5342:onMode = off
+5412:onMode = off
+5414:onMode = off
+5422:onMode = off
+5424:onMode = off
+5432:onMode = off
+5434:onMode = off
+5442:onMode = off
+5444:onMode = off
+5512:onMode = off
+5514:onMode = off
+5522:onMode = off
+5524:onMode = off
+5532:onMode = off
+5534:onMode = off
+5542:onMode = off
+5544:onMode = off
+5544:onMode = off
+
+
+!id:channel:all = onMode bRatio meMode product1 product2
+!511:channel:all = 1 1 100 -421 211 -211
+511:addChannel = 1 1 100 -421 211 -211
+521:addChannel = 1 1 100 -421 211
+!421:channel:all = 1 1 100 -321 211
+421:addChannel = 1 1 100 -321 211
+421:onIfMatch = -321 211
+511:onIfMatch = -421 211 -211
+521:onIfMatch = -421 211
+321:onMode= off
+211:onMode = off
+
+
+ColourReconnection:mode = 2
+
+
+
+
+
+
+
+
