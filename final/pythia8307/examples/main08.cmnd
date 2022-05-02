@@ -1,0 +1,23 @@
+! File: main08.cmnd
+! This file contains commands to be read in for a Pythia8 run.
+! Lines not beginning with a letter or digit are comments.
+! Names are case-insensitive  -  but spellings-sensitive!
+! The changes here are illustrative, not always physics-motivated.
+
+! The current file is input for subruns with consecutive pT ranges.
+
+Beams:idA =  2212
+Beams:idB = 2212
+Beams:eCM = 200.0
+Tune:pp = 14 
+HardQCD:all = on
+HadronLevel:Hadronize = on
+
+Init:showProcesses = off
+Init:showMultipartonInteractions = off
+Init:showChangedSettings = off
+Init:showChangedParticleData = off
+Next:numberCount = 1000000000
+Next:numberShowInfo = 0
+Next:numberShowProcess = 0
+Next:numberShowEvent = 0
