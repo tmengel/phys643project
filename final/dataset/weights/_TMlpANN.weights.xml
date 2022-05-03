@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+<MethodSetup Method="TMlpANN::TMlpANN">
+  <GeneralInfo>
+    <Info name="TMVA Release" value="4.2.1 [262657]"/>
+    <Info name="ROOT Release" value="6.24/02 [399362]"/>
+    <Info name="Creator" value="tmengel"/>
+    <Info name="Date" value="Tue May  3 04:23:21 2022"/>
+    <Info name="Host" value="Linux root-ubuntu-2004-1 5.4.0-73-generic #82-Ubuntu SMP Wed Apr 14 17:39:42 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux"/>
+    <Info name="Dir" value="/home/tmengel/phys643/phys643project/final"/>
+    <Info name="Training events" value="381529"/>
+    <Info name="TrainingTime" value="1.96703419e+03"/>
+    <Info name="AnalysisType" value="Classification"/>
+  </GeneralInfo>
+  <Options>
+    <Option name="V" modified="Yes">False</Option>
+    <Option name="VerbosityLevel" modified="No">Default</Option>
+    <Option name="VarTransform" modified="Yes">N</Option>
+    <Option name="H" modified="Yes">False</Option>
+    <Option name="CreateMVAPdfs" modified="No">False</Option>
+    <Option name="IgnoreNegWeightsInTraining" modified="No">False</Option>
+    <Option name="NCycles" modified="Yes">200</Option>
+    <Option name="HiddenLayers" modified="Yes">N+1,N</Option>
+    <Option name="ValidationFraction" modified="Yes">3.000000e-01</Option>
+    <Option name="LearningMethod" modified="Yes">bfgs</Option>
+  </Options>
+  <Variables NVar="12">
+    <Variable VarIndex="0" Expression="d0Pt" Label="d0Pt" Title="d0Pt" Unit="" Internal="d0Pt" Type="F" Min="7.90263806e-03" Max="9.99529266e+01"/>
+    <Variable VarIndex="1" Expression="d0E" Label="d0E" Title="d0E" Unit="" Internal="d0E" Type="F" Min="1.86704123e+00" Max="7.88557510e+01"/>
+    <Variable VarIndex="2" Expression="pionPt" Label="pionPt" Title="pionPt" Unit="" Internal="pionPt" Type="F" Min="1.37880223e-03" Max="7.52346725e+01"/>
+    <Variable VarIndex="3" Expression="pionE" Label="pionE" Title="pionE" Unit="" Internal="pionE" Type="F" Min="1.39762372e-01" Max="7.23301239e+01"/>
+    <Variable VarIndex="4" Expression="kaonPt" Label="kaonPt" Title="kaonPt" Unit="" Internal="kaonPt" Type="F" Min="9.76904947e-03" Max="9.23326874e+01"/>
+    <Variable VarIndex="5" Expression="kaonE" Label="kaonE" Title="kaonE" Unit="" Internal="kaonE" Type="F" Min="4.94090647e-01" Max="7.53814774e+01"/>
+    <Variable VarIndex="6" Expression="DecayLength" Label="DecayLength" Title="DecayLength" Unit="" Internal="DecayLength" Type="F" Min="3.37924666e-06" Max="1.81935562e+02"/>
+    <Variable VarIndex="7" Expression="cosTheta" Label="cosTheta" Title="cosTheta" Unit="" Internal="cosTheta" Type="F" Min="3.84784244e-06" Max="9.99999940e-01"/>
+    <Variable VarIndex="8" Expression="DCA_D0" Label="DCA_D0" Title="DCA_D0" Unit="" Internal="DCA_D0" Type="F" Min="3.32895024e-06" Max="1.26578300e+02"/>
+    <Variable VarIndex="9" Expression="DCA_Pion" Label="DCA_Pion" Title="DCA_Pion" Unit="" Internal="DCA_Pion" Type="F" Min="1.65389641e-03" Max="1.32687769e+03"/>
+    <Variable VarIndex="10" Expression="DCA_Kaon" Label="DCA_Kaon" Title="DCA_Kaon" Unit="" Internal="DCA_Kaon" Type="F" Min="4.54952009e-03" Max="1.20523425e+03"/>
+    <Variable VarIndex="11" Expression="DCA_piK" Label="DCA_piK" Title="DCA_piK" Unit="" Internal="DCA_piK" Type="F" Min="5.07403183e-06" Max="3.29686035e+02"/>
+  </Variables>
+  <Spectators NSpec="6">
+    <Spectator SpecIndex="0" Expression="kaonPhi" Label="kaonPhi" Title="F" Unit="" Internal="kaonPhi" Type="F" Min="-3.14158630e+00" Max="3.14157963e+00"/>
+    <Spectator SpecIndex="1" Expression="kaonEta" Label="kaonEta" Title="F" Unit="" Internal="kaonEta" Type="F" Min="-6.50094318e+00" Max="6.89160776e+00"/>
+    <Spectator SpecIndex="2" Expression="pionPhi" Label="pionPhi" Title="F" Unit="" Internal="pionPhi" Type="F" Min="-3.14158821e+00" Max="3.14155984e+00"/>
+    <Spectator SpecIndex="3" Expression="pionEta" Label="pionEta" Title="F" Unit="" Internal="pionEta" Type="F" Min="-6.05347109e+00" Max="8.09112930e+00"/>
+    <Spectator SpecIndex="4" Expression="d0Phi" Label="d0Phi" Title="F" Unit="" Internal="d0Phi" Type="F" Min="-3.14159203e+00" Max="3.14159250e+00"/>
+    <Spectator SpecIndex="5" Expression="d0Eta" Label="d0Eta" Title="F" Unit="" Internal="d0Eta" Type="F" Min="-6.18966055e+00" Max="6.41668320e+00"/>
+  </Spectators>
+  <Classes NClass="2">
+    <Class Name="Signal" Index="0"/>
+    <Class Name="Background" Index="1"/>
+  </Classes>
+  <Transformations NTransformations="1">
+    <Transform Name="Normalize">
+      <Selection>
+        <Input NInputs="12">
+          <Input Type="Variable" Label="d0Pt" Expression="d0Pt"/>
+          <Input Type="Variable" Label="d0E" Expression="d0E"/>
+          <Input Type="Variable" Label="pionPt" Expression="pionPt"/>
+          <Input Type="Variable" Label="pionE" Expression="pionE"/>
+          <Input Type="Variable" Label="kaonPt" Expression="kaonPt"/>
+          <Input Type="Variable" Label="kaonE" Expression="kaonE"/>
+          <Input Type="Variable" Label="DecayLength" Expression="DecayLength"/>
+          <Input Type="Variable" Label="cosTheta" Expression="cosTheta"/>
+          <Input Type="Variable" Label="DCA_D0" Expression="DCA_D0"/>
+          <Input Type="Variable" Label="DCA_Pion" Expression="DCA_Pion"/>
+          <Input Type="Variable" Label="DCA_Kaon" Expression="DCA_Kaon"/>
+          <Input Type="Variable" Label="DCA_piK" Expression="DCA_piK"/>
+        </Input>
+        <Output NOutputs="12">
+          <Output Type="Variable" Label="d0Pt" Expression="d0Pt"/>
+          <Output Type="Variable" Label="d0E" Expression="d0E"/>
+          <Output Type="Variable" Label="pionPt" Expression="pionPt"/>
+          <Output Type="Variable" Label="pionE" Expression="pionE"/>
+          <Output Type="Variable" Label="kaonPt" Expression="kaonPt"/>
+          <Output Type="Variable" Label="kaonE" Expression="kaonE"/>
+          <Output Type="Variable" Label="DecayLength" Expression="DecayLength"/>
+          <Output Type="Variable" Label="cosTheta" Expression="cosTheta"/>
+          <Output Type="Variable" Label="DCA_D0" Expression="DCA_D0"/>
+          <Output Type="Variable" Label="DCA_Pion" Expression="DCA_Pion"/>
+          <Output Type="Variable" Label="DCA_Kaon" Expression="DCA_Kaon"/>
+          <Output Type="Variable" Label="DCA_piK" Expression="DCA_piK"/>
+        </Output>
+      </Selection>
+      <Class ClassIndex="0">
+        <Ranges>
+          <Range Index="0" Min="7.9026380553841591e-03" Max="9.9952926635742188e+01"/>
+          <Range Index="1" Min="1.8686757087707520e+00" Max="7.8855751037597656e+01"/>
+          <Range Index="2" Min="1.3788022333756089e-03" Max="7.5234672546386719e+01"/>
+          <Range Index="3" Min="1.3976237177848816e-01" Max="7.2330123901367188e+01"/>
+          <Range Index="4" Min="9.7690494731068611e-03" Max="9.2332687377929688e+01"/>
+          <Range Index="5" Min="4.9409064650535583e-01" Max="7.5381477355957031e+01"/>
+          <Range Index="6" Min="3.3792466638260521e-06" Max="1.3372583007812500e+02"/>
+          <Range Index="7" Min="3.8478424357890617e-06" Max="9.9999994039535522e-01"/>
+          <Range Index="8" Min="3.3289502425759565e-06" Max="8.2476646423339844e+01"/>
+          <Range Index="9" Min="1.6538964118808508e-03" Max="1.0164567260742188e+03"/>
+          <Range Index="10" Min="4.5495200902223587e-03" Max="1.1287823486328125e+03"/>
+          <Range Index="11" Min="5.0740318329189904e-06" Max="1.2871124267578125e+02"/>
+        </Ranges>
+      </Class>
+      <Class ClassIndex="1">
+        <Ranges>
+          <Range Index="0" Min="5.4551318287849426e-02" Max="8.1254081726074219e+01"/>
+          <Range Index="1" Min="1.8670412302017212e+00" Max="7.7944763183593750e+01"/>
+          <Range Index="2" Min="2.0629627630114555e-02" Max="6.5179206848144531e+01"/>
+          <Range Index="3" Min="1.4127348363399506e-01" Max="5.9949005126953125e+01"/>
+          <Range Index="4" Min="2.9100671410560608e-02" Max="7.7682846069335938e+01"/>
+          <Range Index="5" Min="4.9494877457618713e-01" Max="6.2781024932861328e+01"/>
+          <Range Index="6" Min="3.3041334245353937e-03" Max="1.8193556213378906e+02"/>
+          <Range Index="7" Min="1.2858467016485520e-05" Max="9.9999982118606567e-01"/>
+          <Range Index="8" Min="4.7021385398693383e-04" Max="1.2657830047607422e+02"/>
+          <Range Index="9" Min="2.4383382871747017e-02" Max="1.3268776855468750e+03"/>
+          <Range Index="10" Min="2.6029236614704132e-02" Max="1.2052342529296875e+03"/>
+          <Range Index="11" Min="2.3802889045327902e-03" Max="3.2968603515625000e+02"/>
+        </Ranges>
+      </Class>
+      <Class ClassIndex="2">
+        <Ranges>
+          <Range Index="0" Min="7.9026380553841591e-03" Max="9.9952926635742188e+01"/>
+          <Range Index="1" Min="1.8670412302017212e+00" Max="7.8855751037597656e+01"/>
+          <Range Index="2" Min="1.3788022333756089e-03" Max="7.5234672546386719e+01"/>
+          <Range Index="3" Min="1.3976237177848816e-01" Max="7.2330123901367188e+01"/>
+          <Range Index="4" Min="9.7690494731068611e-03" Max="9.2332687377929688e+01"/>
+          <Range Index="5" Min="4.9409064650535583e-01" Max="7.5381477355957031e+01"/>
+          <Range Index="6" Min="3.3792466638260521e-06" Max="1.8193556213378906e+02"/>
+          <Range Index="7" Min="3.8478424357890617e-06" Max="9.9999994039535522e-01"/>
+          <Range Index="8" Min="3.3289502425759565e-06" Max="1.2657830047607422e+02"/>
+          <Range Index="9" Min="1.6538964118808508e-03" Max="1.3268776855468750e+03"/>
+          <Range Index="10" Min="4.5495200902223587e-03" Max="1.2052342529296875e+03"/>
+          <Range Index="11" Min="5.0740318329189904e-06" Max="3.2968603515625000e+02"/>
+        </Ranges>
+      </Class>
+    </Transform>
+  </Transformations>
+  <MVAPdfs/>
+  <Weights>
+    <Architecture BuildOptions="@d0Pt,@d0E,@pionPt,@pionE,@kaonPt,@kaonE,@DecayLength,@cosTheta,@DCA_D0,@DCA_Pion,@DCA_Kaon,@DCA_piK:13:12:type"/>
+    <input>
+      0.30534 -0.673887 0.381783 -0.546735 0.246582 -0.795258 0.261407 -0.753386 0.218246 -0.810988 0.27085 -0.738815 0.0816186 -0.956646 0.563403 0.446582 0.0644783 -0.969089 0.131108 -0.912864 0.158212 -0.891525 0.0572035 -0.969815 
+    </input>
+    <output>
+      1 0 
+    </output>
+    <neurons>
+      -0.344221 -0.0964984 0.0750454 0.46259 0.153384 0.389575 0.211578 0.0690643 -0.377216 -0.335796 -0.37177 -0.351475 -0.183768 -0.00716971 0.352151 -0.509192 1.20645 -0.241169 -2.68138 0.194151 0.672165 1.85503 0.854055 -2.28133 -0.917734 -0.225398 -0.321993 0.543101 -0.423227 -0.677745 0.209415 -0.401579 0.292538 0.452199 0.368241 0.737751 0.0302111 -0.313311 
+    </neurons>
+    <synapses>
+      0.56785 -1.05562 0.288131 -0.502768 0.454401 -0.361114 -0.143704 -0.160516 -0.8188 0.109088 0.165147 -0.66552 0.105216 -0.60674 -0.133364 -0.644639 -0.0594063 -0.716722 0.0936299 0.166621 0.0454685 -0.00650654 -0.0636346 0.316526 -2.07686 -1.49112 -1.79824 -1.19581 -1.69369 -1.75443 1.30646 -0.376539 0.918613 -0.122501 0.231705 1.34855 -0.617403 -0.751976 -0.111756 -0.19454 -0.104415 -0.146235 0.621977 0.612122 0.46558 0.135548 -0.116443 0.71551 -0.307768 0.904436 -0.180017 0.630559 -0.265359 0.379805 0.979224 -0.131915 0.648268 -0.0167106 -0.0495949 1.18155 -1.12358 0.433424 -0.490304 0.295009 -0.525718 0.2494 0.405641 -0.200755 -0.125942 -0.106051 -0.127341 0.308292 -3.76457 2.12308 -4.22087 1.75938 -4.2381 1.82021 -0.699863 -0.0363316 -0.164254 -0.0281807 0.0825358 -0.813635 0.492968 -0.143187 0.707686 -0.0826787 0.114177 0.442665 0.251601 0.468602 0.0416768 -0.19173 -0.263966 0.365425 -0.425284 1.32234 -0.194831 1.53425 -0.0556341 0.969838 -1.60952 0.179169 -1.19085 -0.250185 -0.185787 -1.48886 0.551431 1.00616 0.0340515 0.777624 -0.00849487 0.794479 0.310105 -0.0965709 -0.472641 0.0335801 0.0616209 0.492838 0.0654829 1.60892 -0.0182305 0.379169 -0.285713 1.25513 -1.27163 0.251295 -0.657321 -0.0513618 -0.187571 -1.7211 1.29564 -0.105742 0.746028 -0.249575 0.874235 -0.305867 -2.09862 -0.00902314 -0.90211 0.101994 0.142396 -2.58664 -0.24614 -0.746659 0.325343 -0.920717 -0.434294 -0.232042 0.0271137 0.142666 0.226117 -0.00490297 0.110821 0.372915 0.115521 0.171821 -0.313453 -0.254662 -0.071985 -0.261842 0.667468 0.273121 0.446588 0.252494 0.677628 0.0729976 -0.579023 -0.281212 -0.385351 -0.423286 -0.182856 -0.210675 0.00342621 -0.282709 0.174394 -0.0896357 -0.0207303 0.0978981 -0.346356 -0.348285 0.612422 0.341692 -0.757132 -0.291238 -0.577092 0.171844 -0.350505 -0.122201 0.575281 -0.0771761 0.458162 0.963782 0.107188 0.195712 0.106121 -0.124128 0.381497 -0.0667291 -0.134089 -0.722907 0.361461 -0.408791 -0.728125 -0.819556 0.812038 0.69992 -0.362966 -1.15155 -0.349719 -0.111118 -0.475164 0.167148 -0.31703 0.3474 0.316559 0.82961 0.773776 -0.541921 -0.971685 0.22754 -0.992493 0.0574254 -0.913465 0.131639 -0.406831 2.28169 0.355947 1.14835 0.0555214 0.810487 1.96837 -0.55942 0.830463 1.23032 -0.589539 1.0781 -1.91225 0.420317 -0.610827 -1.1025 -2.09036 -2.26448 -2.26766 -2.01328 0.934102 0.112692 -0.477282 -0.370055 -0.0546085 1.16858 -0.117671 1.10449 0.121645 0.456371 0.305175 0.465471 1.51121 0.562578 0.0779834 0.444986 0.739998 -0.0493551 0.631819 0.193857 0.888551 -0.141499 -0.394273 0.320547 -0.459325 -0.474701 -0.0116819 -0.0729184 -0.0810292 -0.0268822 -0.273343 0.386157 -0.171446 -0.295915 -0.601619 -0.113026 0.301243 0.00912177 -0.108829 -0.140697 0.402355 -0.349827 -0.459851 -0.180344 -0.170177 0.418222 0.191357 0.261855 0.629553 0.490077 -0.0630726 -0.117154 0.204999 0.397363 0.315273 -0.724322 0.253722 -0.317294 1.18531 2.0246 -0.55949 -0.267056 -1.75459 -0.375906 1.16545 0.768584 -0.567296 0.400802 -0.886429 1.12783 1.05677 1.05167 -2.63301 0.811467 -0.964548 0.189492 -0.203398 1.38256 
+    </synapses>
+  </Weights>
+</MethodSetup>
